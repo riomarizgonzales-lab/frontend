@@ -35,11 +35,12 @@ function renderProducts(list){
     // Product display: image, name, price
     let imageHtml = '';
     if (p.imageUrl) {
-      const imageSrc = p.imageUrl.startsWith('http') ? p.imageUrl : (window.API_URL + p.imageUrl);
-      imageHtml = `<img src="${imageSrc}" alt="${p.name}" style="width:100%;height:120px;object-fit:cover;display:block;margin-bottom:8px" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'width:100%;height:120px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;color:#999;font-size:12px;margin-bottom:8px\'>📷 No image</div>'"/>`;
+      const imageSrc = p.imageUrl.startsWith('http') ? p.imageUrl : ((window.API_URL || window.location.origin) + p.imageUrl);
+      imageHtml = `<img src="${imageSrc}" alt="${p.name}" class="product-image" loading="lazy" onerror="this.style.display='none'"/>`;
     } else {
-      imageHtml = '<div style="width:100%;height:120px;background:#e0e0e0;display:flex;align-items:center;justify-content:center;color:#999;font-size:12px;margin-bottom:8px">📷 No image</div>';
+      imageHtml = '<div class="product-image" style="display:flex;align-items:center;justify-content:center;color:#a0aac0;font-size:14px;"> No image</div>';
     }
+    
     div.innerHTML = `
       ${imageHtml}
       <div style="padding:10px 12px;">
@@ -100,3 +101,4 @@ function addToCart(item){
 }
 
 window.addEventListener('load', fetchProducts);
+
