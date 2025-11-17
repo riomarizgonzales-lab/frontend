@@ -1,39 +1,43 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Dashboard - BlueTech</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Dashboard - MARCOM</title>
   <link rel="stylesheet" href="css/style.css"/>
   <script src="config.js"></script>
 </head>
 <body>
   <div class="container">
-    <header class="header" style="margin-bottom:24px;background:linear-gradient(135deg,#0f9bd3,#0b6b92);color:white;padding:16px 20px;border-radius:12px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 16px rgba(11,107,146,0.12);border:1px solid rgba(255,255,255,0.1);">
-      <div class="brand" style="display:flex;align-items:center;gap:14px;">
-        <div class="logo" style="width:50px;height:50px;background:rgba(11,107,146,0.4);border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:20px;box-shadow:0 2px 8px rgba(0,0,0,0.1);">BT</div>
-        <div>
-          <div style="font-weight:700;font-size:16px;">Dashboard</div>
-          <small style="opacity:0.9;font-size:12px;">Welcome back, <span id="userName">User</span></small>
+    <header>
+      <div class="logo-section">
+        <div class="logo-icon">🎯</div>
+        <div class="logo-text">
+          <h1>MARCOM</h1>
+          <p>MORE LOWER PRICE</p>
         </div>
       </div>
-      <div class="top-icons" style="display:flex;gap:8px;align-items:center;">
-        <a class="icon-btn" href="index.html" style="display:flex;align-items:center;gap:6px;background:rgba(11,107,146,0.3);padding:10px 14px;border-radius:8px;color:white;text-decoration:none;font-weight:600;font-size:14px;box-shadow:0 2px 6px rgba(0,0,0,0.1);"><img src="https://img.icons8.com/ios-glyphs/24/ffffff/home.png" style="width:24px;height:24px;"/> Home</a>
-        <a class="icon-btn" href="cart.html" style="display:flex;align-items:center;gap:6px;background:rgba(11,107,146,0.3);padding:10px 14px;border-radius:8px;color:white;text-decoration:none;font-weight:600;font-size:14px;box-shadow:0 2px 6px rgba(0,0,0,0.1);"><img src="https://img.icons8.com/ios-glyphs/24/ffffff/shopping-cart.png" style="width:24px;height:24px;"/> Cart</a>
-        <button class="icon-btn" id="logoutBtn" style="display:flex;align-items:center;gap:6px;background:rgba(255,100,100,0.3);padding:10px 14px;border-radius:8px;color:white;font-weight:600;font-size:14px;border:none;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-          <img src="https://img.icons8.com/ios-glyphs/24/ffffff/logout-rounded-right.png" style="width:24px;height:24px;" alt="Logout"/>
-          Logout
-        </button>
-      </div>
+      <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="cart.html">🛒 Cart</a>
+        <a href="#"><span id="userName">👤 User</span></a>
+        <button id="logoutBtn" style="background: rgba(255, 107, 107, 0.2); border: 1px solid rgba(255, 107, 107, 0.4); color: #ff6b6b; padding: 10px 14px; border-radius: 8px; cursor: pointer; font-weight: 600;">🚪 Logout</button>
+      </nav>
     </header>
 
-    <section style="margin-bottom:32px;">
-      <div style="background:linear-gradient(135deg,#e6f8ff,#d4f3ff);color:#0b6b92;padding:28px 24px;border-radius:12px;margin-bottom:24px;border:1px solid rgba(15,155,211,0.2);box-shadow:0 2px 8px rgba(11,107,146,0.08);">
-        <h2 style="margin:0 0 8px;font-size:20px;font-weight:700;">👋 Welcome back, <span id="dashUserName">User</span>!</h2>
-        <p style="margin:0;font-size:14px;opacity:0.9;">Browse and add your favorite products to cart</p>
-      </div>
-      <h2 style="color:#0b6b92;margin:0 0 16px;font-size:18px;font-weight:700;display:flex;align-items:center;gap:8px;">🛍️ Featured Products</h2>
-    <div id="productsGrid" class="products-grid"></div>
-    </section>
+    <main>
+      <section class="hero">
+        <h1>👋 Welcome back, <span id="dashUserName">User</span>!</h1>
+        <p>Browse and add your favorite products to your cart</p>
+      </section>
+
+      <section class="products-section">
+        <h2>🛍️ Featured Products</h2>
+        <div id="products" class="products-grid"></div>
+      </section>
+    </main>
+
+    <footer>© 2025 MARCOM Computer Shop. All rights reserved.</footer>
   </div>
 
   <script src="main.js"></script>
@@ -72,4 +76,3 @@
   </script>
 </body>
 </html>
-
